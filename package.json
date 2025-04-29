@@ -26,5 +26,8 @@
   },
   "scripts": {
     "start": "nodemon app.js --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.10"
   }
 }
