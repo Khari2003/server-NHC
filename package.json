@@ -25,7 +25,7 @@
     "xml2js": "^0.6.2"
   },
   "scripts": {
-    "start": "nodemon app.js --host 0.0.0.0"
+    "start": "nodemon app.js"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.7.10"
