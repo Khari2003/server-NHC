@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for server-nhc on 2025-04-29T14:58:26Z
+# fly.toml app configuration file generated for server-morning-forest-197 on 2025-04-29T14:58:26Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'server-nhc'
+app = 'server-morning-forest-197'
 primary_region = 'sin'
 
 [build]
