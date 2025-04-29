@@ -11,6 +11,10 @@ const adminRoutes = require('./adminRoute');
 const storeRoutes = require('./storeRoute');
 const reviewController = require('../controller/reviewController');
 
+router.get('/', (req, res) => {
+    res.send('Hello World')
+  })
+
 router.use('/api/auth', authRoutes);
 router.use('/api/users', authJwt(), userRoutes);
 router.use('/api/messages', authJwt(), messageRoutes);
