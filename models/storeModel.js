@@ -11,7 +11,7 @@ const storeSchema = new Schema({
         trim: true
     },
     location: {
-        street: String,
+        address: String,
         city: String,
         postalCode: String,
         country: String,

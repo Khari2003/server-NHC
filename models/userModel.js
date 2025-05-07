@@ -31,7 +31,7 @@ const userSchema = new Schema({
         priceRange: { type: String, enum: ['$', '$$', '$$$', '$$$$'] }
     },
     location: {
-        street: String,
+        address: String,
         city: String,
         postalCode: String,
         country: String,

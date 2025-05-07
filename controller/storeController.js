@@ -13,9 +13,7 @@ exports.validateStore = [
 
 exports.createStore = async (req, res) => {
     try {
-        if (!req.user.isAdmin) {
-            return res.status(403).json({ message: 'Admin access required' });
-        }
+        // Bỏ yêu cầu isAdmin để bất kỳ người dùng đăng nhập nào cũng tạo được
         const images = req.files?.map(file => `/uploads/restaurants/${file.filename}`) || [];
         const store = await new Store({
             ...req.body,
@@ -29,6 +27,7 @@ exports.createStore = async (req, res) => {
     }
 };
 
+// Giữ nguyên các hàm khác
 exports.updateStore = async (req, res) => {
     try {
         const store = await Store.findById(req.params.id);
