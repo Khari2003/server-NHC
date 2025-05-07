@@ -13,7 +13,6 @@ exports.validateStore = [
 
 exports.createStore = async (req, res) => {
     try {
-        // Bỏ yêu cầu isAdmin để bất kỳ người dùng đăng nhập nào cũng tạo được
         const images = req.files?.map(file => `/uploads/restaurants/${file.filename}`) || [];
         const store = await new Store({
             ...req.body,

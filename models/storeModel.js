@@ -13,7 +13,10 @@ const storeSchema = new Schema({
     location: {
         address: String,
         city: String,
-        postalCode: String,
+        postalCode: {
+            type: String,
+            default: null
+        },
         country: String,
         coordinates: {
             lat: Number,
