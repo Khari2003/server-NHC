@@ -3,13 +3,13 @@ const { Store } = require('../models/storeModel');
 
 exports.searchStores = async (req, res) => {
     try {
-        const { lat, lng, radius, dietary, cuisine, priceRange } = req.query;
+        const { latitude, longitude, radius, dietary, cuisine, priceRange } = req.query;
         const query = { isApproved: true };
 
-        if (lat && lng && radius) {
+        if (latitude && longitude && radius) {
             query['location.coordinates'] = {
                 $near: {
-                    $geometry: { type: 'Point', coordinates: [parseFloat(lng), parseFloat(lat)] },
+                    $geometry: { type: 'Point', coordinates: [parseFloat(longitude), parseFloat(latitude)] },
                     $maxDistance: parseInt(radius)
                 }
             };
@@ -40,7 +40,7 @@ exports.searchStores = async (req, res) => {
             }
         }
 
-        const stores = await Store.find(query).populate('reviews');
+        const stores = await Store.find(query).populatitudee('reviews');
         res.status(200).json(stores);
     } catch (error) {
         console.error(error);

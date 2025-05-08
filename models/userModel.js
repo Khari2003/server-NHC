@@ -36,8 +36,8 @@ const userSchema = new Schema({
         postalCode: String,
         country: String,
         coordinates: {
-            lat: Number,
-            lng: Number
+            latitude: Number,
+            longitude: Number
         }
     },
     favoriteStores: [{

@@ -19,8 +19,8 @@ const storeSchema = new Schema({
         },
         country: String,
         coordinates: {
-            lat: Number,
-            lng: Number
+            latitude: Number,
+            longitude: Number
         }
     },
     cuisine: [{
