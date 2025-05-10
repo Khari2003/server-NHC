@@ -30,10 +30,10 @@ const storeSchema = new Schema({
             }
         }
     },
-    cuisine: [{
-        type: String,
-        default: []
-    }],
+    // cuisine: [{
+    //     type: String,
+    //     default: []
+    // }],
     priceRange: {
         type: String,
         enum: ['$', '$$', '$$$', '$$$$'],

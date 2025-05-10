@@ -1,0 +1,818 @@
+[
+    {
+        "_id": "67e911685477a2415d4a7bbe",
+        "name": "Nhà Hàng New Day",
+        "description": "",
+        "location": {
+            "address": "72 Mã Mây",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.853359,
+                    21.0346545
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911695477a2415d4a7bc0",
+        "name": "Nhà Hàng Blue Butterfly",
+        "description": "",
+        "location": {
+            "address": "69 Mã Mây",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8535038,
+                    21.0347487
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911695477a2415d4a7bc2",
+        "name": "Noodle & Roll",
+        "description": "",
+        "location": {
+            "address": "39C Phố Lý Quốc Sư",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8492754,
+                    21.0297478
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911695477a2415d4a7bc4",
+        "name": "Little Hanoi",
+        "description": "",
+        "location": {
+            "address": "16 Phố Hàng Bè",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8537432,
+                    21.0334623
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__-v": 0
+    },
+    {
+        "_id": "67e911695477a2415d4a7bc6",
+        "name": "Chay Aummee",
+        "description": "",
+        "location": {
+            "address": "26 Phố Châu Long",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8425594,
+                    21.0457483
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e9116a5477a2415d4a7bc8",
+        "name": "Hương Việt",
+        "description": "",
+        "location": {
+            "address": "13 Phố Hàng Cá",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8488756,
+                    21.0360635
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e9116a5477a2415d4a7bca",
+        "name": "Nhà Hàng Hồng Hoài",
+        "description": "",
+        "location": {
+            "address": "20 Phố Bát Đàn",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8474622,
+                    21.0337915
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e9116b5477a2415d4a7bcc",
+        "name": "Unnamed Store",
+        "description": "",
+        "location": {
+            "address": "34 Đường Thành",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8471607,
+                    21.0308724
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e9116b plastics5477a2415d4a7bce",
+        "name": "Nhà Hàng Jalus Vegan",
+        "description": "",
+        "location": {
+            "address": "46 Phố Hàng Trống",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8495042,
+                    21.0306344
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": ["vegan"],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e9116b5477a2415d4a7bd0",
+        "name": "Cơm Chay Nàng Tấm",
+        "description": "",
+        "location": {
+            "address": "79A Phố Trần Hưng Đạo",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8469426,
+                    21.0223434
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": ["vegan"],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "681ce1c9d9177389a24397c7",
+        "name": "Nhà Hàng Gòn - Bites & Veggies",
+        "description": "",
+        "location": {
+            "address": "123 Phố Hàng Bông",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.850123,
+                    21.030456
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [
+            "Vietnamese",
+            "Vegetarian"
+        ],
+        "priceRange": "$$",
+        "dietaryOptions": [
+            "vegan",
+            "vegetarian"
+        ],
+        "images": [],
+        "owner": "6813a6c332c9bbb83ce7d8f1",
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-05-08T16:54:33.688Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e9116d5477a2415d4a7bd4",
+        "name": "Nhà Hàng Chay Mihn",
+        "description": "",
+        "location": {
+            "address": "09 Phố Ấu Triệu",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8483461,
+                    21.0284211
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": ["vegan"],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e9116d5477a2415d4a7bd6",
+        "name": "An Lac Chay",
+        "description": "",
+        "location": {
+            "address": "Phố Đặng Thai Mai",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8245151,
+                    21.0626442
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": ["vegan"],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e9116e5477a2415d4a7bd8",
+        "name": "V-Cuisine",
+        "description": "",
+        "location": {
+            "address": "29 Phố Hàng Giầy",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8513089,
+                    21.0349195
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e9116e5477a2415d4a7bda",
+        "name": "V-cuisine",
+        "description": "",
+        "location": {
+            "address": "29",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8512197,
+                    21.0350189
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e9116e5477a2415d4a7bdc",
+        "name": "Veggie Castle",
+        "description": "",
+        "location": {
+            "address": "2 Ngõ 275 Âu Cơ",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8247552,
+                    21.0709941
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": ["vegan"],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911705477a2415d4a7bde",
+        "name": "Sadhu",
+        "description": "",
+        "location": {
+            "address": "87 Phố Lý Thường Kiệt",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8424463,
+                    21.0255335
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911705477a2415d4a7be0",
+        "name": "Unnamed Store",
+        "description": "",
+        "location": {
+            "address": "42 Phố Lương Văn Can",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8502658,
+                    21.0330076
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911715477a2415d4a7be2",
+        "name": "VEJO - The Vege Journey",
+        "description": "",
+        "location": {
+            "address": "46B Phố Bát Đàn",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8464019,
+                    21.0337011
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.api/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911715477a2415d4a7be4",
+        "name": "The East",
+        "description": "",
+        "location": {
+            "address": "Phố Tống Duy Tân",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8441279,
+                    21.0297293
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911715477a2415d4a7be6",
+        "name": "d",
+        "description": "",
+        "location": {
+            "address": "dd Ngõ 151 Phố Lê Văn Hiến",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.7726483,
+                    21.0730862
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911725477a2415d4a7be8",
+        "name": "Unnamed Store",
+        "description": "",
+        "location": {
+            "address": "83 Phố Mai Hắc Đế",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8511005,
+                    21.0133011
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911725477a2415d4a7bea",
+        "name": "Unnamed Store",
+        "description": "",
+        "location": {
+            "address": "41 Phố Hàng Mành",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8486496,
+                    21.0312714
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911735477a2415d4a7bec",
+        "name": "Nhà Hàng Chay Cực Lạc",
+        "description": "",
+        "location": {
+            "address": "Số 9 Ngõ 295 Thụy Khuê",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8137909,
+                    21.0450778
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": ["vegan"],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911735477a2415d4a7bee",
+        "name": "Bánh mì chay Vegan",
+        "description": "",
+        "location": {
+            "address": "64 Phố Hàng Trống",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8497103,
+                    21.0303507
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": ["vegan"],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911745477a2415d4a7bf0",
+        "name": "Quán Little Hà Nội",
+        "description": "",
+        "location": {
+            "address": "24b Phố Lý Quốc Sư",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8489505,
+                    21.0302188
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911745477a2415d4a7bf2",
+        "name": "Bếp Chay Huệ Nhiên",
+        "description": "",
+        "location": {
+            "address": "152E Phố Triệu Việt Vương",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8503514,
+                    21.0136947
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": ["vegan"],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911755477a2415d4a7bf4",
+        "name": "Nhà Hàng Chay Me&An Vegetarian",
+        "description": "",
+        "location": {
+            "address": "61 Phố Hàm Long",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.850731,
+                    21.0202038
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": ["vegetarian"],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911755477a2415d4a7bf6",
+        "name": "Green Inn",
+        "description": "",
+        "location": {
+            "address": "41 Phố Hàng Nón",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.847612,
+                    21.0324629
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    },
+    {
+        "_id": "67e911755477a2415d4a7bf8",
+        "name": "Thích nhất mỳ",
+        "description": "",
+        "location": {
+            "address": "20 Ngách 31/46 Xuân Diệu",
+            "city": "Hà Nội",
+            "country": "Việt Nam",
+            "coordinates": {
+                "type": "Point",
+                "coordinates": [
+                    105.8267217,
+                    21.0615198
+                ]
+            },
+            "postalCode": null
+        },
+        "cuisine": [],
+        "priceRange": "$",
+        "dietaryOptions": [],
+        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
+        "owner": null,
+        "reviews": [],
+        "isApproved": false,
+        "createdAt": "2025-03-30T00:00:00.000Z",
+        "__v": 0
+    }
+]
