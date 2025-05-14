@@ -7,13 +7,28 @@ exports.uploadImages = upload.array('images', 10);
 
 exports.validateStore = [
     body('name').notEmpty().withMessage('Name is required'),
-    body('cuisine').isArray().withMessage('Cuisine must be an array'),
+    body('type').isIn([
+        'historical_site',
+        'museum',
+        'natural_landmark',
+        'amusement_park',
+        'beach',
+        'park',
+        'cultural_site',
+        'religious_site',
+        'zoo',
+        'aquarium',
+        'market',
+        'festival',
+        'viewpoint',
+        'other'
+    ]).withMessage('Invalid attraction type'),
     body('priceRange').isIn(['$', '$$', '$$$', '$$$$']).withMessage('Invalid price range')
 ];
 
 exports.createStore = async (req, res) => {
     try {
-        const images = req.files?.map(file => `/uploads/restaurants/${file.filename}`) || [];
+        const images = req.files?.map(file => `/uploads/attractions/${file.filename}`) || [];
         const store = await new Store({
             ...req.body,
             images,
@@ -26,17 +41,19 @@ exports.createStore = async (req, res) => {
     }
 };
 
-// Giữ nguyên các hàm khác
 exports.updateStore = async (req, res) => {
     try {
+        if (!req.user || !req.user.id) {
+            return res.status(401).json({ message: 'Authentication required' });
+        }
         const store = await Store.findById(req.params.id);
         if (!store) {
-            return res.status(404).json({ message: 'Restaurant not found' });
+            return res.status(404).json({ message: 'Attraction not found' });
         }
-        if (!req.user.isAdmin && store.owner.toString() !== req.user.id) {
+        if (store.owner.toString() !== req.user.id) {
             return res.status(403).json({ message: 'Unauthorized' });
         }
-        const images = req.files?.map(file => `/uploads/restaurants/${file.filename}`) || [];
+        const images = req.files?.map(file => `/uploads/attractions/${file.filename}`) || [];
         if (images.length) {
             await deleteImage(store.images);
             store.images = images;
@@ -54,7 +71,7 @@ exports.deleteStore = async (req, res) => {
     try {
         const store = await Store.findById(req.params.id);
         if (!store) {
-            return res.status(404).json({ message: 'Restaurant not found' });
+            return res.status(404).json({ message: 'Attraction not found' });
         }
         if (!req.user.isAdmin && store.owner.toString() !== req.user.id) {
             return res.status(403).json({ message: 'Unauthorized' });
@@ -72,7 +89,7 @@ exports.getStore = async (req, res) => {
     try {
         const store = await Store.findById(req.params.id).populate('reviews');
         if (!store) {
-            return res.status(404).json({ message: 'Restaurant not found' });
+            return res.status(404).json({ message: 'Attraction not found' });
         }
         res.status(200).json(store);
     } catch (error) {

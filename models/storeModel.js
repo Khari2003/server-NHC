@@ -39,11 +39,31 @@ const storeSchema = new Schema({
         enum: ['$', '$$', '$$$', '$$$$'],
         default: '$'
     },
-    dietaryOptions: [{
+    // dietaryOptions: [{
+    //     type: String,
+    //     enum: ['vegan', 'vegetarian', 'gluten-free', 'halal', 'kosher', 'other'],
+    //     default: []
+    // }],
+    type: {
         type: String,
-        enum: ['vegan', 'vegetarian', 'gluten-free', 'halal', 'kosher', 'other'],
-        default: []
-    }],
+        enum: [
+            'historical_site',
+            'museum',
+            'natural_landmark',
+            'amusement_park',
+            'beach',
+            'park',
+            'cultural_site',
+            'religious_site',
+            'zoo',
+            'aquarium',
+            'market',
+            'festival',
+            'viewpoint',
+            'other'
+        ],
+        required: true
+    },
     images: [{
         type: String
     }],
