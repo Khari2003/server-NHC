@@ -28,7 +28,13 @@ exports.validateStore = [
 
 exports.createStore = async (req, res) => {
     try {
-        const images = req.files?.map(file => `/uploads/attractions/${file.filename}`) || [];
+        // Ưu tiên images từ req.body (URL Cloudinary), nếu không có thì dùng req.files
+        const images = req.body.images && Array.isArray(req.body.images)
+            ? req.body.images
+            : req.files?.map(file => `/uploads/attractions/${file.filename}`) || [];
+        
+        console.log('Received store data:', { ...req.body, images }); // Ghi log để kiểm tra
+
         const store = await new Store({
             ...req.body,
             images,
@@ -36,7 +42,7 @@ exports.createStore = async (req, res) => {
         }).save();
         res.status(201).json(store);
     } catch (error) {
-        console.error(error);
+        console.error('Error creating store:', error);
         res.status(500).json({ type: error.name, message: error.message });
     }
 };
@@ -53,8 +59,11 @@ exports.updateStore = async (req, res) => {
         if (store.owner.toString() !== req.user.id) {
             return res.status(403).json({ message: 'Unauthorized' });
         }
-        const images = req.files?.map(file => `/uploads/attractions/${file.filename}`) || [];
-        if (images.length) {
+        // Ưu tiên images từ req.body, nếu không có thì dùng req.files
+        const images = req.body.images && Array.isArray(req.body.images)
+            ? req.body.images
+            : req.files?.map(file => `/uploads/attractions/${file.filename}`) || [];
+        if (images.length && images !== store.images) {
             await deleteImage(store.images);
             store.images = images;
         }
@@ -62,7 +71,7 @@ exports.updateStore = async (req, res) => {
         await store.save();
         res.status(200).json(store);
     } catch (error) {
-        console.error(error);
+        console.error('Error updating store:', error);
         res.status(500).json({ type: error.name, message: error.message });
     }
 };
@@ -80,7 +89,7 @@ exports.deleteStore = async (req, res) => {
         await store.deleteOne();
         res.status(204).end();
     } catch (error) {
-        console.error(error);
+        console.error('Error deleting store:', error);
         res.status(500).json({ type: error.name, message: error.message });
     }
 };
@@ -93,7 +102,7 @@ exports.getStore = async (req, res) => {
         }
         res.status(200).json(store);
     } catch (error) {
-        console.error(error);
+        console.error('Error getting store:', error);
         res.status(500).json({ type: error.name, message: error.message });
     }
 };
@@ -103,7 +112,7 @@ exports.getAllStores = async (req, res) => {
         const stores = await Store.find().populate('reviews');
         res.status(200).json(stores);
     } catch (error) {
-        console.error(error);
+        console.error('Error getting stores:', error);
         res.status(500).json({ type: error.name, message: error.message });
     }
 };
