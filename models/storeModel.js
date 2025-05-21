@@ -36,8 +36,8 @@ const storeSchema = new Schema({
     // }],
     priceRange: {
         type: String,
-        enum: ['$', '$$', '$$$', '$$$$'],
-        default: '$'
+        enum: ['Miễn phí','Thấp', 'Tầm trung', 'Cao cấp', 'Sang trọng'],
+        default: 'Tầm trung'
     },
     // dietaryOptions: [{
     //     type: String,
@@ -47,20 +47,19 @@ const storeSchema = new Schema({
     type: {
         type: String,
         enum: [
-            'historical_site',
-            'museum',
-            'natural_landmark',
-            'amusement_park',
-            'beach',
-            'park',
-            'cultural_site',
-            'religious_site',
-            'zoo',
-            'aquarium',
-            'market',
-            'festival',
-            'viewpoint',
-            'other'
+            'Di tích lịch sử',
+            'Bảo tàng',
+            'Di tích tự nhiên',
+            'Trung tâm giải trí',
+            'công viên',
+            'Di tích văn hóa',
+            'Di tích tôn giáo',
+            'Sở thú',
+            'Thủy cung',
+            'Nhà hàng',
+            'Địa điểm ngắm cảnh',
+            'Rạp chiếu phim',
+            'Khác'
         ],
         required: true
     },
