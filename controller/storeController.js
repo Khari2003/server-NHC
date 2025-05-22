@@ -6,34 +6,44 @@ const { body } = require('express-validator');
 exports.uploadImages = upload.array('images', 10);
 
 exports.validateStore = [
-    body('name').notEmpty().withMessage('Name is required'),
-    body('type').isIn([
-        'historical_site',
-        'museum',
-        'natural_landmark',
-        'amusement_park',
-        'beach',
-        'park',
-        'cultural_site',
-        'religious_site',
-        'zoo',
-        'aquarium',
-        'market',
-        'festival',
-        'viewpoint',
-        'other'
-    ]).withMessage('Invalid attraction type'),
-    body('priceRange').isIn(['$', '$$', '$$$', '$$$$']).withMessage('Invalid price range')
+    // For POST: All fields are required
+    body('name').optional().notEmpty().withMessage('Name is required'),
+    body('type')
+        .optional()
+        .isIn([
+            'Di tích lịch sử',
+            'Bảo tàng',
+            'Di tích tự nhiên',
+            'Trung tâm giải trí',
+            'Công viên',
+            'Di tích văn hóa',
+            'Di tích tôn giáo',
+            'Sở thú',
+            'Thủy cung',
+            'Nhà hàng',
+            'Địa điểm ngắm cảnh',
+            'Rạp chiếu phim',
+            'Khác'
+        ])
+        .withMessage('Invalid attraction type'),
+    body('priceRange')
+        .optional()
+        .isIn(['Miễn phí', 'Thấp', 'Tầm trung', 'Cao cấp', 'Sang trọng'])
+        .withMessage('Invalid price range')
 ];
 
 exports.createStore = async (req, res) => {
     try {
-        // Ưu tiên images từ req.body (URL Cloudinary), nếu không có thì dùng req.files
+        // Validate required fields for creation
+        if (!req.body.name || !req.body.type || !req.body.priceRange) {
+            return res.status(400).json({ message: 'Name, type, and priceRange are required' });
+        }
+
         const images = req.body.images && Array.isArray(req.body.images)
             ? req.body.images
             : req.files?.map(file => `/uploads/attractions/${file.filename}`) || [];
         
-        console.log('Received store data:', { ...req.body, images }); // Ghi log để kiểm tra
+        console.log('Received store data:', { ...req.body, images });
 
         const store = await new Store({
             ...req.body,
@@ -56,18 +66,34 @@ exports.updateStore = async (req, res) => {
         if (!store) {
             return res.status(404).json({ message: 'Attraction not found' });
         }
-        if (store.owner.toString() !== req.user.id) {
+        if (!req.user.isAdmin && store.owner.toString() !== req.user.id) {
             return res.status(403).json({ message: 'Unauthorized' });
         }
-        // Ưu tiên images từ req.body, nếu không có thì dùng req.files
-        const images = req.body.images && Array.isArray(req.body.images)
-            ? req.body.images
-            : req.files?.map(file => `/uploads/attractions/${file.filename}`) || [];
-        if (images.length && images !== store.images) {
-            await deleteImage(store.images);
-            store.images = images;
+
+        // Handle images: Prioritize req.body.images, fallback to req.files or keep existing
+        let images = store.images;
+        if (req.body.images && Array.isArray(req.body.images)) {
+            // Compare new images with old ones to delete unused images
+            const imagesToDelete = store.images.filter(url => !req.body.images.includes(url));
+            if (imagesToDelete.length > 0) {
+                await deleteImage(imagesToDelete);
+            }
+            images = req.body.images;
+        } else if (req.files && req.files.length > 0) {
+            // If new files are uploaded, delete all old images
+            if (store.images.length > 0) {
+                await deleteImage(store.images);
+            }
+            images = req.files.map(file => `/uploads/attractions/${file.filename}`);
         }
-        Object.assign(store, req.body);
+
+        // Update only provided fields
+        const updateData = {
+            ...req.body,
+            images,
+            updatedAt: Date.now()
+        };
+        Object.assign(store, updateData);
         await store.save();
         res.status(200).json(store);
     } catch (error) {
@@ -85,7 +111,9 @@ exports.deleteStore = async (req, res) => {
         if (!req.user.isAdmin && store.owner.toString() !== req.user.id) {
             return res.status(403).json({ message: 'Unauthorized' });
         }
-        await deleteImage(store.images);
+        if (store.images.length > 0) {
+            await deleteImage(store.images);
+        }
         await store.deleteOne();
         res.status(204).end();
     } catch (error) {
