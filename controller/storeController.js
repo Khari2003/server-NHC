@@ -6,35 +6,33 @@ const { body } = require('express-validator');
 exports.uploadImages = upload.array('images', 10);
 
 exports.validateStore = [
-    // For POST: All fields are required
     body('name').optional().notEmpty().withMessage('Name is required'),
     body('type')
         .optional()
         .isIn([
-            'Di tích lịch sử',
-            'Bảo tàng',
-            'Di tích tự nhiên',
-            'Trung tâm giải trí',
-            'Công viên',
-            'Di tích văn hóa',
-            'Di tích tôn giáo',
-            'Sở thú',
-            'Thủy cung',
-            'Nhà hàng',
-            'Địa điểm ngắm cảnh',
-            'Rạp chiếu phim',
-            'Khác'
+            'Historical Site',
+            'Museum',
+            'Natural Landmark',
+            'Entertainment Center',
+            'Park',
+            'Cultural Site',
+            'Religious Site',
+            'Zoo',
+            'Aquarium',
+            'Restaurant',
+            'Scenic Spot',
+            'Cinema',
+            'Other'
         ])
         .withMessage('Invalid attraction type'),
     body('priceRange')
         .optional()
-        .isIn(['Miễn phí', 'Thấp', 'Tầm trung', 'Cao cấp', 'Sang trọng'])
+        .isIn(['Free', 'Low', 'Moderate', 'High', 'Luxury'])
         .withMessage('Invalid price range')
 ];
 
 exports.createStore = async (req, res) => {
     try {
-        // Validate required fields for creation
         if (!req.body.name || !req.body.type || !req.body.priceRange) {
             return res.status(400).json({ message: 'Name, type, and priceRange are required' });
         }
@@ -70,24 +68,20 @@ exports.updateStore = async (req, res) => {
             return res.status(403).json({ message: 'Unauthorized' });
         }
 
-        // Handle images: Prioritize req.body.images, fallback to req.files or keep existing
         let images = store.images;
         if (req.body.images && Array.isArray(req.body.images)) {
-            // Compare new images with old ones to delete unused images
             const imagesToDelete = store.images.filter(url => !req.body.images.includes(url));
             if (imagesToDelete.length > 0) {
                 await deleteImage(imagesToDelete);
             }
             images = req.body.images;
         } else if (req.files && req.files.length > 0) {
-            // If new files are uploaded, delete all old images
             if (store.images.length > 0) {
                 await deleteImage(store.images);
             }
             images = req.files.map(file => `/uploads/attractions/${file.filename}`);
         }
 
-        // Update only provided fields
         const updateData = {
             ...req.body,
             images,

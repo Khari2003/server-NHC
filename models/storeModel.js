@@ -1,3 +1,12 @@
+// cuisine: [{
+    //     type: String,
+    //     default: []
+    // }],
+        // dietaryOptions: [{
+    //     type: String,
+    //     enum: ['vegan', 'vegetarian', 'gluten-free', 'halal', 'kosher', 'other'],
+    //     default: []
+    // }],
 const { Schema, model } = require('mongoose');
 
 const storeSchema = new Schema({
@@ -30,36 +39,27 @@ const storeSchema = new Schema({
             }
         }
     },
-    // cuisine: [{
-    //     type: String,
-    //     default: []
-    // }],
     priceRange: {
         type: String,
-        enum: ['Miễn phí','Thấp', 'Tầm trung', 'Cao cấp', 'Sang trọng'],
-        default: 'Tầm trung'
+        enum: ['Free', 'Low', 'Moderate', 'High', 'Luxury'],
+        default: 'Moderate'
     },
-    // dietaryOptions: [{
-    //     type: String,
-    //     enum: ['vegan', 'vegetarian', 'gluten-free', 'halal', 'kosher', 'other'],
-    //     default: []
-    // }],
     type: {
         type: String,
         enum: [
-            'Di tích lịch sử',
-            'Bảo tàng',
-            'Di tích tự nhiên',
-            'Trung tâm giải trí',
-            'công viên',
-            'Di tích văn hóa',
-            'Di tích tôn giáo',
-            'Sở thú',
-            'Thủy cung',
-            'Nhà hàng',
-            'Địa điểm ngắm cảnh',
-            'Rạp chiếu phim',
-            'Khác'
+            'Historical Site',
+            'Museum',
+            'Natural Landmark',
+            'Entertainment Center',
+            'Park',
+            'Cultural Site',
+            'Religious Site',
+            'Zoo',
+            'Aquarium',
+            'Restaurant',
+            'Scenic Spot',
+            'Cinema',
+            'Other'
         ],
         required: true
     },
