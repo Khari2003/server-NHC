@@ -1,12 +1,3 @@
-// cuisine: [{
-    //     type: String,
-    //     default: []
-    // }],
-        // dietaryOptions: [{
-    //     type: String,
-    //     enum: ['vegan', 'vegetarian', 'gluten-free', 'halal', 'kosher', 'other'],
-    //     default: []
-    // }],
 const { Schema, model } = require('mongoose');
 
 const storeSchema = new Schema({
@@ -19,6 +10,19 @@ const storeSchema = new Schema({
         type: String,
         trim: true
     },
+    menu: [
+        {
+            name: {
+                type: String,
+                required: true
+            },
+            price: {
+                type: Number,
+                required: true,
+                min: 0
+            }
+        }
+    ],
     location: {
         address: String,
         city: String,
@@ -41,25 +45,18 @@ const storeSchema = new Schema({
     },
     priceRange: {
         type: String,
-        enum: ['Free', 'Low', 'Moderate', 'High', 'Luxury'],
+        enum: ['Low', 'Moderate', 'High'],
         default: 'Moderate'
     },
     type: {
         type: String,
         enum: [
-            'Historical Site',
-            'Museum',
-            'Natural Landmark',
-            'Entertainment Center',
-            'Park',
-            'Cultural Site',
-            'Religious Site',
-            'Zoo',
-            'Aquarium',
-            'Restaurant',
-            'Scenic Spot',
-            'Cinema',
-            'Other'
+            'chay-phat-giao',        // Nhà hàng chay Phật giáo (thuần chay)
+            'chay-a-au',             // Nhà hàng chay Âu - Á
+            'chay-hien-dai',         // Nhà hàng thuần chay hiện đại (vegan bistro/cafe)
+            'com-chay-binh-dan',     // Quán cơm chay bình dân
+            'buffet-chay',           // Nhà hàng buffet chay
+            'chay-ton-giao-khac'     // Nhà hàng chay theo tôn giáo khác (Ấn Độ, Jain, v.v.)
         ],
         required: true
     },

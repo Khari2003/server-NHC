@@ -26,9 +26,15 @@ const userSchema = new Schema({
         default: false
     },
     preferences: {
-        dietary: [{ type: String, enum: ['vegan', 'vegetarian', 'gluten-free', 'halal', 'kosher', 'other'] }],
+        dietary: [{ 
+            type: String, 
+            enum: ['vegan', 'vegetarian', 'gluten-free', 'halal', 'kosher', 'other'] 
+        }],
         cuisine: [{ type: String }],
-        priceRange: { type: String, enum: ['$', '$$', '$$$', '$$$$'] }
+        priceRange: { 
+            type: String, 
+            enum: ['Low', 'Moderate', 'High'] 
+        }
     },
     location: {
         address: String,
@@ -36,8 +42,15 @@ const userSchema = new Schema({
         postalCode: String,
         country: String,
         coordinates: {
-            latitude: Number,
-            longitude: Number
+            type: {
+                type: String,
+                enum: ['Point'],
+                default: 'Point'
+            },
+            coordinates: {
+                type: [Number], // [longitude, latitude]
+                required: false
+            }
         }
     },
     favoriteStores: [{

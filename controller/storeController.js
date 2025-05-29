@@ -10,24 +10,17 @@ exports.validateStore = [
     body('type')
         .optional()
         .isIn([
-            'Historical Site',
-            'Museum',
-            'Natural Landmark',
-            'Entertainment Center',
-            'Park',
-            'Cultural Site',
-            'Religious Site',
-            'Zoo',
-            'Aquarium',
-            'Restaurant',
-            'Scenic Spot',
-            'Cinema',
-            'Other'
+            'chay-phat-giao',        // Nhà hàng chay Phật giáo (thuần chay)
+            'chay-a-au',             // Nhà hàng chay Âu - Á
+            'chay-hien-dai',         // Nhà hàng thuần chay hiện đại (vegan bistro/cafe)
+            'com-chay-binh-dan',     // Quán cơm chay bình dân
+            'buffet-chay',           // Nhà hàng buffet chay
+            'chay-ton-giao-khac'     // Nhà hàng chay theo tôn giáo khác (Ấn Độ, Jain, v.v.)
         ])
         .withMessage('Invalid attraction type'),
     body('priceRange')
         .optional()
-        .isIn(['Free', 'Low', 'Moderate', 'High', 'Luxury'])
+        .isIn(['Low', 'Moderate', 'High'])
         .withMessage('Invalid price range')
 ];
 
