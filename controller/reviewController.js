@@ -17,11 +17,11 @@ exports.leaveReview = async function (req, res) {
     try {
         const user = await User.findById(req.user.id);
         if (!user) {
-            return res.status(404).json({ message: 'User not found' });
+            return res.status(404).json({ message: 'Người dùng không tìm thấy' });
         }
         const store = await Store.findById(req.params.id);
         if (!store) {
-            return res.status(404).json({ message: 'Restaurant not found' });
+            return res.status(404).json({ message: 'Nhà hàng không tìm thấy' });
         }
         const images = req.files?.map(file => `/uploads/restaurants/${file.filename}`) || [];
         const review = await new Review({
@@ -32,10 +32,19 @@ exports.leaveReview = async function (req, res) {
             rating: req.body.rating,
             images
         }).save();
+
+        // Khởi tạo reviews nếu không tồn tại
+        store.reviews = store.reviews || [];
         store.reviews.push(review._id);
+
+        // Tính lại điểm đánh giá trung bình
+        const reviews = await Review.find({ store: store._id });
+        const averageRating = reviews.length > 0
+            ? parseFloat((reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length).toFixed(1))
+            : 0;
+        store.rating = averageRating;
+
         await store.save();
-        const emailBody = buildReviewEmail(user.name, review, store.name);
-        await emailSender.sendMail(user.email, `Your Review for ${store.name}`, emailBody);
         res.status(201).json(review);
     } catch (error) {
         console.error(error);

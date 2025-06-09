@@ -38,7 +38,7 @@ const storeSchema = new Schema({
                 default: 'Point'
             },
             coordinates: {
-                type: [Number], // [longitude, latitude]
+                type: [Number], // [kinh độ, vĩ độ]
                 required: true
             }
         }
@@ -69,8 +69,15 @@ const storeSchema = new Schema({
     },
     reviews: [{
         type: Schema.Types.ObjectId,
-        ref: 'Review'
+        ref: 'Review',
+        default: []
     }],
+    rating: {
+        type: Number,
+        default: 0,
+        min: 0,
+        max: 5
+    },
     isApproved: {
         type: Boolean,
         default: false
