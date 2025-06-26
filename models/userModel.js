@@ -1,5 +1,26 @@
 const { Schema, model } = require('mongoose');
 
+const followedSchema = new Schema({
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    followedAt: {
+        type: Date,
+        default: Date.now
+    }
+}, { _id: false });
+
+const bioSchema = new Schema({
+    intro: { 
+        type: String 
+    },
+    website: { 
+        type: String 
+    }
+}, { _id: false });
+
 const userSchema = new Schema({
     name: {
         type: String,
@@ -29,12 +50,8 @@ const userSchema = new Schema({
     profilephoto: { 
         type: String 
     },
-    followedby: [
-        followedSchema
-    ],
-    follows: [
-        followedSchema
-    ],
+    followedby: [followedSchema],
+    follows: [followedSchema],
     storydate: { 
         type: Date 
     },    
@@ -90,15 +107,6 @@ const userSchema = new Schema({
     },
     bio: bioSchema
 });
-
-const bioSchema = new mongoose.Schema({
-    intro: { 
-        type: String 
-    },
-    website: { 
-        type: String 
-    }
-}, { _id: false });
 
 userSchema.index({ 'location.coordinates': '2dsphere' });
 
