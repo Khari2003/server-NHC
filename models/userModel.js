@@ -17,10 +17,27 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
+    gender: { 
+        type: String, 
+        enum: ['male', 'female', 'other'], 
+        required: true 
+    },
     phone: {
         type: String,
         trim: true
     },
+    profilephoto: { 
+        type: String 
+    },
+    followedby: [
+        followedSchema
+    ],
+    follows: [
+        followedSchema
+    ],
+    storydate: { 
+        type: Date 
+    },    
     isAdmin: {
         type: Boolean,
         default: false
@@ -70,8 +87,18 @@ const userSchema = new Schema({
     },
     resetPasswordOtpExpiration: {
         type: Date
-    }
+    },
+    bio: bioSchema
 });
+
+const bioSchema = new mongoose.Schema({
+    intro: { 
+        type: String 
+    },
+    website: { 
+        type: String 
+    }
+}, { _id: false });
 
 userSchema.index({ 'location.coordinates': '2dsphere' });
 
