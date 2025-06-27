@@ -44,11 +44,19 @@ exports.createStore = async (req, res) => {
             ? req.body.images
             : req.files?.map(file => `/uploads/attractions/${file.filename}`) || [];
         
-        console.log('Dữ liệu cửa hàng nhận được:', { ...req.body, images });
+        const menu = req.body.menu && Array.isArray(req.body.menu)
+            ? req.body.menu
+            : [];
+        
+        const description = req.body.description || null;
+
+        console.log('Dữ liệu cửa hàng nhận được:', { ...req.body, images, menu, description });
 
         const store = await new Store({
             ...req.body,
             images,
+            menu,
+            description,
             owner: req.user.id
         }).save();
         res.status(201).json(store);
@@ -88,6 +96,8 @@ exports.updateStore = async (req, res) => {
         const updateData = {
             ...req.body,
             images,
+            menu: req.body.menu && Array.isArray(req.body.menu) ? req.body.menu : store.menu,
+            description: req.body.description !== undefined ? req.body.description : store.description,
             updatedAt: Date.now()
         };
         Object.assign(store, updateData);

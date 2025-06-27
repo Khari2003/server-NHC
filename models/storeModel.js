@@ -8,10 +8,11 @@ const storeSchema = new Schema({
     },
     description: {
         type: String,
-        trim: true
+        trim: true,
+        default: null // Optional
     },
-    menu: [
-        {
+    menu: {
+        type: [{
             name: {
                 type: String,
                 required: true
@@ -21,8 +22,9 @@ const storeSchema = new Schema({
                 required: true,
                 min: 0
             }
-        }
-    ],
+        }],
+        default: [] // Optional
+    },
     location: {
         address: String,
         city: String,
@@ -38,7 +40,7 @@ const storeSchema = new Schema({
                 default: 'Point'
             },
             coordinates: {
-                type: [Number], // [kinh độ, vĩ độ]
+                type: [Number], // [longitude, latitude]
                 required: true
             }
         }
@@ -60,9 +62,10 @@ const storeSchema = new Schema({
         ],
         required: true
     },
-    images: [{
-        type: String
-    }],
+    images: {
+        type: [String],
+        default: [] // Optional
+    },
     owner: {
         type: Schema.Types.ObjectId,
         ref: 'User'
