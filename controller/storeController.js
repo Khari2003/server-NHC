@@ -6,7 +6,7 @@ const { body } = require('express-validator');
 exports.uploadImages = upload.array('images', 10);
 
 exports.validateStore = [
-    body('name').notEmpty().withMessage('Tên là bắt buộc'),
+    body('name').notEmpty().withMessage('Tên cửa hàng không được để trống'),
     body('type')
         .isIn([
             'chay-phat-giao',        // Nhà hàng chay Phật giáo (thuần chay)
@@ -20,13 +20,25 @@ exports.validateStore = [
     body('priceRange')
         .isIn(['Low', 'Moderate', 'High'])
         .withMessage('Khoảng giá không hợp lệ'),
-    body('location.address').notEmpty().withMessage('Địa chỉ là bắt buộc')
+    body('location.address').notEmpty().withMessage('Địa chỉ không được để trống')
 ];
 
 exports.createStore = async (req, res) => {
     try {
-        if (!req.body.name || !req.body.type || !req.body.priceRange || !req.body.location?.address) {
-            return res.status(400).json({ message: 'Tên, loại, khoảng giá và địa chỉ là bắt buộc' });
+        console.log('Dữ liệu nhận được:', req.body); // Log để debug
+
+        // Kiểm tra từng trường bắt buộc
+        if (!req.body.name || req.body.name.trim() === '') {
+            return res.status(400).json({ message: 'Tên cửa hàng không được để trống' });
+        }
+        if (!req.body.type || req.body.type.trim() === '') {
+            return res.status(400).json({ message: 'Loại cửa hàng không được để trống' });
+        }
+        if (!req.body.priceRange || req.body.priceRange.trim() === '') {
+            return res.status(400).json({ message: 'Khoảng giá không được để trống' });
+        }
+        if (!req.body.location || !req.body.location.address || req.body.location.address.trim() === '') {
+            return res.status(400).json({ message: 'Địa chỉ không được để trống' });
         }
 
         // Kiểm tra địa chỉ trùng lặp
@@ -66,6 +78,7 @@ exports.createStore = async (req, res) => {
     }
 };
 
+// ... phần còn lại của file giữ nguyên
 exports.updateStore = async (req, res) => {
     try {
         if (!req.user || !req.user.id) {
