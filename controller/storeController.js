@@ -27,20 +27,6 @@ exports.createStore = async (req, res) => {
     try {
         console.log('Dữ liệu nhận được:', req.body); // Log để debug
 
-        // Kiểm tra từng trường bắt buộc
-        if (!req.body.name || req.body.name.trim() === '') {
-            return res.status(400).json({ message: 'Tên cửa hàng không được để trống' });
-        }
-        if (!req.body.type || req.body.type.trim() === '') {
-            return res.status(400).json({ message: 'Loại cửa hàng không được để trống' });
-        }
-        if (!req.body.priceRange || req.body.priceRange.trim() === '') {
-            return res.status(400).json({ message: 'Khoảng giá không được để trống' });
-        }
-        if (!req.body.location || !req.body.location.address || req.body.location.address.trim() === '') {
-            return res.status(400).json({ message: 'Địa chỉ không được để trống' });
-        }
-
         // Kiểm tra địa chỉ trùng lặp
         const existingStore = await Store.findOne({ 
             'location.address': req.body.location.address,
