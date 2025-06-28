@@ -9,29 +9,44 @@ exports.validateStore = [
     body('name').notEmpty().withMessage('Tên cửa hàng không được để trống'),
     body('type')
         .isIn([
-            'chay-phat-giao',        // Nhà hàng chay Phật giáo (thuần chay)
-            'chay-a-au',             // Nhà hàng chay Âu - Á
-            'chay-hien-dai',         // Nhà hàng thuần chay hiện đại (vegan bistro/cafe)
-            'com-chay-binh-dan',     // Quán cơm chay bình dân
-            'buffet-chay',           // Nhà hàng buffet chay
-            'chay-ton-giao-khac'     // Nhà hàng chay theo tôn giáo khác (Ấn Độ, Jain, v.v.)
+            'chay-phat-giao',
+            'chay-a-au',
+            'chay-hien-dai',
+            'com-chay-binh-dan',
+            'buffet-chay',
+            'chay-ton-giao-khac'
         ])
         .withMessage('Loại cửa hàng không hợp lệ'),
     body('priceRange')
         .isIn(['Low', 'Moderate', 'High'])
         .withMessage('Khoảng giá không hợp lệ'),
-    body('location.address').notEmpty().withMessage('Địa chỉ không được để trống')
+    body('location.address').notEmpty().withMessage('Địa chỉ không được để trống'),
+    body('reviews')
+        .optional()
+        .custom(value => {
+            if (value === undefined || value === null) return true;
+            if (typeof value === 'string') {
+                try {
+                    const parsed = JSON.parse(value);
+                    return Array.isArray(parsed);
+                } catch (e) {
+                    return false;
+                }
+            }
+            return Array.isArray(value);
+        })
+        .withMessage('Reviews phải là một mảng')
 ];
 
 exports.createStore = async (req, res) => {
     try {
-        console.log('Dữ liệu nhận được:', req.body); // Log để debug
+        console.log('Dữ liệu nhận được:', req.body);
 
         // Kiểm tra địa chỉ trùng lặp
         const existingStore = await Store.findOne({ 
-            'location.address': req.body.location.address,
-            'location.city': req.body.location.city,
-            'location.country': req.body.location.country
+            'location.address': req.body.location?.address,
+            'location.city': req.body.location?.city,
+            'location.country': req.body.location?.country
         });
         
         if (existingStore) {
@@ -42,19 +57,38 @@ exports.createStore = async (req, res) => {
             ? req.body.images
             : req.files?.map(file => `/uploads/attractions/${file.filename}`) || [];
         
-        const menu = req.body.menu && Array.isArray(req.body.menu)
-            ? req.body.menu
-            : [];
+        const menu = req.body.menu && typeof req.body.menu === 'string'
+            ? JSON.parse(req.body.menu)
+            : Array.isArray(req.body.menu)
+                ? req.body.menu
+                : [];
         
         const description = req.body.description || null;
 
-        console.log('Dữ liệu cửa hàng nhận được:', { ...req.body, images, menu, description });
+        // Phân tích reviews nếu được gửi dưới dạng chuỗi JSON
+        let reviews = [];
+        if (typeof req.body.reviews === 'string') {
+            try {
+                reviews = JSON.parse(req.body.reviews);
+                if (!Array.isArray(reviews)) {
+                    reviews = [];
+                }
+            } catch (e) {
+                console.error('Lỗi khi phân tích reviews:', e);
+                reviews = [];
+            }
+        } else if (Array.isArray(req.body.reviews)) {
+            reviews = req.body.reviews;
+        }
+
+        console.log('Dữ liệu cửa hàng nhận được:', { ...req.body, images, menu, description, reviews });
 
         const store = await new Store({
             ...req.body,
             images,
             menu,
             description,
+            reviews,
             owner: req.user.id
         }).save();
         res.status(201).json(store);
@@ -64,7 +98,6 @@ exports.createStore = async (req, res) => {
     }
 };
 
-// ... phần còn lại của file giữ nguyên
 exports.updateStore = async (req, res) => {
     try {
         if (!req.user || !req.user.id) {
