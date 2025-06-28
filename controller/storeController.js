@@ -21,6 +21,25 @@ exports.validateStore = [
         .isIn(['Low', 'Moderate', 'High'])
         .withMessage('Khoảng giá không hợp lệ'),
     body('location.address').notEmpty().withMessage('Địa chỉ không được để trống'),
+    body('location')
+        .custom(value => {
+            let location = value;
+            if (typeof value === 'string') {
+                try {
+                    location = JSON.parse(value);
+                } catch (e) {
+                    throw new Error('Định dạng location không hợp lệ');
+                }
+            }
+            if (!location.coordinates || !Array.isArray(location.coordinates.coordinates)) {
+                throw new Error('Tọa độ phải là một mảng');
+            }
+            if (location.coordinates.coordinates.length !== 2) {
+                throw new Error('Tọa độ phải chứa chính xác 2 số (kinh độ, vĩ độ)');
+            }
+            return true;
+        })
+        .withMessage('Location không hợp lệ'),
     body('reviews')
         .optional()
         .custom(value => {
@@ -42,11 +61,22 @@ exports.createStore = async (req, res) => {
     try {
         console.log('Dữ liệu nhận được:', req.body);
 
+        // Phân tích location nếu được gửi dưới dạng chuỗi JSON
+        let location = req.body.location;
+        if (typeof req.body.location === 'string') {
+            try {
+                location = JSON.parse(req.body.location);
+            } catch (e) {
+                console.error('Lỗi khi phân tích location:', e);
+                return res.status(400).json({ message: 'Định dạng location không hợp lệ' });
+            }
+        }
+
         // Kiểm tra địa chỉ trùng lặp
         const existingStore = await Store.findOne({ 
-            'location.address': req.body.location?.address,
-            'location.city': req.body.location?.city,
-            'location.country': req.body.location?.country
+            'location.address': location?.address,
+            'location.city': location?.city,
+            'location.country': location?.country
         });
         
         if (existingStore) {
@@ -81,10 +111,11 @@ exports.createStore = async (req, res) => {
             reviews = req.body.reviews;
         }
 
-        console.log('Dữ liệu cửa hàng nhận được:', { ...req.body, images, menu, description, reviews });
+        console.log('Dữ liệu cửa hàng nhận được:', { ...req.body, images, menu, description, reviews, location });
 
         const store = await new Store({
             ...req.body,
+            location, // Sử dụng location đã phân tích
             images,
             menu,
             description,
