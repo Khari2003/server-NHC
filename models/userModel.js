@@ -21,6 +21,21 @@ const bioSchema = new Schema({
     }
 }, { _id: false });
 
+const storySchema = new Schema({
+    storyId: {
+        type: String,
+        required: true
+    },
+    mediaUrl: {
+        type: String,
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
+}, { _id: false });
+
 const userSchema = new Schema({
     name: {
         type: String,
@@ -105,10 +120,42 @@ const userSchema = new Schema({
     resetPasswordOtpExpiration: {
         type: Date
     },
-    bio: bioSchema
+    bio: bioSchema,
+    deviceToken: {
+        type: String,
+        default: ''
+    },
+    numberOfNewNotifications: {
+        type: Number,
+        default: 0
+    },
+    numberOfNewMessages: {
+        type: Number,
+        default: 0
+    },
+    channelId: {
+        type: String,
+        default: ''
+    },
+    lastThreePostUrls: [{
+        type: String
+    }],
+    charactersOfName: [{
+        type: String
+    }],
+    posts: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Post'
+    }],
+    chatsOfGroups: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Conversation'
+    }],
+    storiesInfo: [storySchema]
 });
 
 userSchema.index({ 'location.coordinates': '2dsphere' });
+userSchema.index({ email: 1 });
 
 userSchema.set('toObject', { virtuals: true });
 userSchema.set('toJSON', { virtuals: true });

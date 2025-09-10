@@ -164,9 +164,9 @@ exports.forgotPassword = async function (req, res) {
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
-        const otp = Math.floor(100000 + Math.random() * 900000);
-        user.resetPasswordOtp = otp;
-        user.resetPasswordOtpExpiration = Date.now() + 300000; // OTP hết hạn sau 5 phút
+        const otp = Math.floor(100000 + Math.random() * 900000).toString();
+        user.resetPasswordOtp = bcrypt.hashSync(otp, 8); // Mã hóa OTP
+        user.resetPasswordOtpExpiration = Date.now() + 300000; // Hết hạn sau 5 phút
         await user.save();
         const response = await emailSender.sendMail(
             email,
@@ -191,10 +191,10 @@ exports.verifyPasswordResetOtp = async function (req, res) {
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
-        if (user.resetPasswordOtp !== otp || Date.now() > user.resetPasswordOtpExpiration) {
+        if (!bcrypt.compareSync(otp, user.resetPasswordOtp) || Date.now() > user.resetPasswordOtpExpiration) {
             return res.status(401).json({ message: 'Invalid or expired OTP' });
         }
-        user.resetPasswordOtp = '1';
+        user.resetPasswordOtp = '1'; // Đánh dấu OTP đã xác minh
         user.resetPasswordOtpExpiration = undefined;
         await user.save();
         return res.json({ message: 'OTP confirmed' });

@@ -9,7 +9,11 @@ const userRoutes = require('./userRoute');
 const messageRoutes = require('./messageRoute');
 const adminRoutes = require('./adminRoute');
 const storeRoutes = require('./storeRoute');
-const reviewController = require('../controller/reviewController');
+const chatRoutes = require('./chatRoute');
+const commentRoutes = require('./commentRoute');
+const postRoutes = require('./postRoute');
+const storiesRoutes = require('./storiesRoute');
+// const reviewController = require('../controller/reviewController');
 
 router.get('/', (req, res) => {
     res.send('Hello World')
@@ -20,8 +24,11 @@ router.use('/api/users', authJwt(), userRoutes);
 router.use('/api/messages', authJwt(), messageRoutes);
 router.use('/api/admin', authJwt(), adminRoutes);
 router.use('/api/stores', storeRoutes);
-router.get('/api/stores/:id/reviews', reviewController.getStoreReviews);
-router.post('/api/stores/:id/reviews', authJwt(), authorizeRequests, reviewController.uploadImages, reviewController.validateReview, reviewController.leaveReview);
+router.use('/api/chat', authJwt(), chatRoutes);
+router.use('/api/comments', authJwt(), commentRoutes);
+router.use('/api/posts', postRoutes);
+router.use('/api/stories', authJwt(), storiesRoutes);
+// router.use('/api/reviews', authJwt(), authorizeRequests, reviewController);
 router.use(errorHandler);
 
 module.exports = router;

@@ -1,20 +1,24 @@
 const router = require('express').Router();
 const userController = require('../controller/userController');
-const favoriteController = require('../controller/favoriteController');
-const wishlistController = require('../controller/wishlistController');
+const { User } = require('../models/userModel')
+const { Conversation } = require('../models/conversationModel');
+// const favoriteController = require('../controller/favoriteController');
+// const wishlistController = require('../controller/wishlistController');
 
+
+// User Routes
 router.get('/', userController.getUser);
 router.get('/:id', userController.getUserById);
-router.put('/:id', userController.updateUser);
-router.put('/:id/preferences', userController.updatePreferences);
-router.get('/:id/reviews', userController.getUserReviews);
-router.post('/:id/conversations', userController.createConversation);
-router.get('/:id/conversations', userController.getConversations);
-router.get('/:id/favorites', favoriteController.getUserFavorites);
-router.post('/:id/favorites', favoriteController.addToFavorites);
-router.delete('/:id/favorites', favoriteController.removeFromFavorites);
-router.get('/:id/wishlist', wishlistController.getUserWishList);
-router.post('/:id/wishlist', wishlistController.addToWishList);
-router.delete('/:id/wishlist', wishlistController.removeFromWishList);
+router.put('/', userController.updateUser);
+router.put('/preferences', userController.updatePreferences);
+router.get('/reviews', userController.getUserReviews);
+router.post('/conversation', userController.createConversation);
+router.get('/conversations', userController.getConversations);
+router.post('/create', userController.createUser);
+router.put('/channel', userController.updateChannelId);
+router.put('/follow/:followingUserId', userController.addThisUserToMyFollowing);
+router.delete('/follow/:followingUserId', userController.unFollowThisUser);
+router.put('/array-remove', userController.arrayRemoveOfField);
+router.get('/search', userController.searchAboutUser);
 
 module.exports = router;
