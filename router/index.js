@@ -13,7 +13,8 @@ const chatRoutes = require('./chatRoute');
 const commentRoutes = require('./commentRoute');
 const postRoutes = require('./postRoute');
 const storiesRoutes = require('./storiesRoute');
-// const reviewController = require('../controller/reviewController');
+const localVideoRoutes = require('./localVideoRoute'); 
+const ocrMenuRouter = require('./ocrMenuRouter');
 
 router.get('/', (req, res) => {
     res.send('Hello World')
@@ -28,7 +29,8 @@ router.use('/api/chat', authJwt(), chatRoutes);
 router.use('/api/comments', authJwt(), commentRoutes);
 router.use('/api/posts', postRoutes);
 router.use('/api/stories', authJwt(), storiesRoutes);
-// router.use('/api/reviews', authJwt(), authorizeRequests, reviewController);
+router.use('/api/local-videos', localVideoRoutes); 
+router.use('/api/ocr', ocrMenuRouter);
 router.use(errorHandler);
 
 module.exports = router;

@@ -21,20 +21,20 @@ const bioSchema = new Schema({
     }
 }, { _id: false });
 
-const storySchema = new Schema({
-    storyId: {
-        type: String,
-        required: true
-    },
-    mediaUrl: {
-        type: String,
-        required: true
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    }
-}, { _id: false });
+// const storySchema = new Schema({
+//     storyId: {
+//         type: String,
+//         required: true
+//     },
+//     mediaUrl: {
+//         type: String,
+//         required: true
+//     },
+//     createdAt: {
+//         type: Date,
+//         default: Date.now
+//     }
+// }, { _id: false });
 
 const userSchema = new Schema({
     name: {
@@ -121,37 +121,37 @@ const userSchema = new Schema({
         type: Date
     },
     bio: bioSchema,
-    deviceToken: {
-        type: String,
-        default: ''
-    },
-    numberOfNewNotifications: {
-        type: Number,
-        default: 0
-    },
-    numberOfNewMessages: {
-        type: Number,
-        default: 0
-    },
-    channelId: {
-        type: String,
-        default: ''
-    },
-    lastThreePostUrls: [{
-        type: String
-    }],
-    charactersOfName: [{
-        type: String
-    }],
-    posts: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Post'
-    }],
-    chatsOfGroups: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Conversation'
-    }],
-    storiesInfo: [storySchema]
+    // deviceToken: {
+    //     type: String,
+    //     default: ''
+    // },
+    // numberOfNewNotifications: {
+    //     type: Number,
+    //     default: 0
+    // },
+    // numberOfNewMessages: {
+    //     type: Number,
+    //     default: 0
+    // },
+    // channelId: {
+    //     type: String,
+    //     default: ''
+    // },
+    // lastThreePostUrls: [{
+    //     type: String
+    // }],
+    // charactersOfName: [{
+    //     type: String
+    // }],
+    // posts: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Post'
+    // }],
+    // chatsOfGroups: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Conversation'
+    // }],
+    // storiesInfo: [storySchema]
 });
 
 userSchema.index({ 'location.coordinates': '2dsphere' });
