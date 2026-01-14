@@ -20,7 +20,7 @@ async function loadModel() {
   if (!session) {
     try {
       session = await ort.InferenceSession.create(
-        "D:/NhaHangChay/Server/YOLO/best.onnx",
+        "YOLO/best.onnx",
         { executionProviders: ["cpu"] }
       );
       console.log("✅ YOLO model loaded");
@@ -35,7 +35,7 @@ async function loadModel() {
 async function loadDictionary() {
   if (vietnameseDictionary) return vietnameseDictionary;
 
-  const jsonPath = "D:/NhaHangChay/Server/words.json";
+  const jsonPath = "words.json";
   try {
     if (fs.existsSync(jsonPath)) {
       const data = fs.readFileSync(jsonPath, "utf8").trim();
