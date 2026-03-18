@@ -1,818 +1,1597 @@
 [
-    {
-        "_id": "67e911685477a2415d4a7bbe",
-        "name": "Nhà Hàng New Day",
-        "description": "",
-        "location": {
-            "address": "72 Mã Mây",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.853359,
-                    21.0346545
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+  {
+    "_id": "1",
+    "name": "Chay Khải Tường",
+    "description": "Thời đầu tiên của những bữa ăn chay",
+    "location": {
+      "address": "Kim Mã",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8125221,
+        21.0360932
+      ]
     },
-    {
-        "_id": "67e911695477a2415d4a7bc0",
-        "name": "Nhà Hàng Blue Butterfly",
-        "description": "",
-        "location": {
-            "address": "69 Mã Mây",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8535038,
-                    21.0347487
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active",
+    "createdAt": "2010-01-01"
+  },
+  {
+    "_id": "2",
+    "name": "Cơm Chay Hà Thành",
+    "description": "Gần công ty, vừa hợp khẩu vị",
+    "location": {
+      "address": "17 ngõ 73 Giang Văn Minh",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8267862,
+        21.0338408
+      ]
     },
-    {
-        "_id": "67e911695477a2415d4a7bc2",
-        "name": "Noodle & Roll",
-        "description": "",
-        "location": {
-            "address": "39C Phố Lý Quốc Sư",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8492754,
-                    21.0297478
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "3",
+    "name": "Nhà hàng chay Hàn Quốc Chaha",
+    "description": "",
+    "location": {
+      "address": "Số 66 Phạm Huy Thông, Ngọc Khánh, Ba Đình",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8115454,
+        21.0291095
+      ]
     },
-    {
-        "_id": "67e911695477a2415d4a7bc4",
-        "name": "Little Hanoi",
-        "description": "",
-        "location": {
-            "address": "16 Phố Hàng Bè",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8537432,
-                    21.0334623
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__-v": 0
+    "cuisine": [
+      "Korean",
+      "Vegetarian"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "4",
+    "name": "CƠM CHAY HOA SEN",
+    "description": "Chỗ ngồi hơi chật, chè ngon",
+    "location": {
+      "address": "Số 2 ngõ 209 Đội Cấn, Ba Đình",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.829331,
+        21.0333789
+      ]
     },
-    {
-        "_id": "67e911695477a2415d4a7bc6",
-        "name": "Chay Aummee",
-        "description": "",
-        "location": {
-            "address": "26 Phố Châu Long",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8425594,
-                    21.0457483
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "closed"
+  },
+  {
+    "_id": "12",
+    "name": "TỊNH NGHIỆP",
+    "description": "Hàng rào cây xinh",
+    "location": {
+      "address": "56A Đội Cấn, Ba Đình",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.829331,
+        21.0333789
+      ]
     },
-    {
-        "_id": "67e9116a5477a2415d4a7bc8",
-        "name": "Hương Việt",
-        "description": "",
-        "location": {
-            "address": "13 Phố Hàng Cá",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8488756,
-                    21.0360635
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "unknown"
+  },
+  {
+    "_id": "15",
+    "name": "BÚP TÂM AN",
+    "description": "Nhiều góc xinh, menu gọi món",
+    "location": {
+      "address": "C4 Vũ Ngọc Phan",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.810892,
+        21.0141136
+      ]
     },
-    {
-        "_id": "67e9116a5477a2415d4a7bca",
-        "name": "Nhà Hàng Hồng Hoài",
-        "description": "",
-        "location": {
-            "address": "20 Phố Bát Đàn",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8474622,
-                    21.0337915
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "16",
+    "name": "Chay Hạnh Phúc – Cơ sở 3",
+    "description": "Quán xinh, tiếp khách",
+    "location": {
+      "address": "Ngọc Khánh, Ba Đình",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8161912,
+        21.0314813
+      ]
     },
-    {
-        "_id": "67e9116b5477a2415d4a7bcc",
-        "name": "Unnamed Store",
-        "description": "",
-        "location": {
-            "address": "34 Đường Thành",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8471607,
-                    21.0308724
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "17",
+    "name": "Mộc Gia Vegan",
+    "description": "Cơm Bento, bán buổi trưa",
+    "location": {
+      "address": "Ngõ 125 Nguyễn Ngọc Vũ",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8089419,
+        21.0113302
+      ]
     },
-    {
-        "_id": "67e9116b plastics5477a2415d4a7bce",
-        "name": "Nhà Hàng Jalus Vegan",
-        "description": "",
-        "location": {
-            "address": "46 Phố Hàng Trống",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8495042,
-                    21.0306344
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": ["vegan"],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian",
+      "Japanese"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "22",
+    "name": "TÂM ĐỨC",
+    "description": "",
+    "location": {
+      "address": "14 Dịch Vọng, Cầu Giấy",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7849289,
+        21.0316124
+      ]
     },
-    {
-        "_id": "67e9116b5477a2415d4a7bd0",
-        "name": "Cơm Chay Nàng Tấm",
-        "description": "",
-        "location": {
-            "address": "79A Phố Trần Hưng Đạo",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8469426,
-                    21.0223434
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": ["vegan"],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "26",
+    "name": "Cơm chay Hồ Tây - Duy Tân",
+    "description": "",
+    "location": {
+      "address": "B20-21 Ngõ 76 Duy Tân, Cầu Giấy",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7838697,
+        21.0317712
+      ]
     },
-    {
-        "_id": "681ce1c9d9177389a24397c7",
-        "name": "Nhà Hàng Gòn - Bites & Veggies",
-        "description": "",
-        "location": {
-            "address": "123 Phố Hàng Bông",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.850123,
-                    21.030456
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [
-            "Vietnamese",
-            "Vegetarian"
-        ],
-        "priceRange": "$$",
-        "dietaryOptions": [
-            "vegan",
-            "vegetarian"
-        ],
-        "images": [],
-        "owner": "6813a6c332c9bbb83ce7d8f1",
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-05-08T16:54:33.688Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "27",
+    "name": "CƠM CHAY PHƯỚC HẬU",
+    "description": "",
+    "location": {
+      "address": "Ngõ 76 Duy Tân, Cầu Giấy",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7838697,
+        21.0317712
+      ]
     },
-    {
-        "_id": "67e9116d5477a2415d4a7bd4",
-        "name": "Nhà Hàng Chay Mihn",
-        "description": "",
-        "location": {
-            "address": "09 Phố Ấu Triệu",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8483461,
-                    21.0284211
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": ["vegan"],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "30",
+    "name": "Buffet Chay Tịnh Phuc",
+    "description": "",
+    "location": {
+      "address": "Ngõ 199 Trần Quốc Hoàn, Cầu Giấy",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7840202,
+        21.0411435
+      ]
     },
-    {
-        "_id": "67e9116d5477a2415d4a7bd6",
-        "name": "An Lac Chay",
-        "description": "",
-        "location": {
-            "address": "Phố Đặng Thai Mai",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8245151,
-                    21.0626442
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": ["vegan"],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "31",
+    "name": "Chay Citta",
+    "description": "Giá cao, trên 100k/món",
+    "location": {
+      "address": "Nguyễn Chánh, Cầu Giấy",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7857425,
+        21.0201437
+      ]
     },
-    {
-        "_id": "67e9116e5477a2415d4a7bd8",
-        "name": "V-Cuisine",
-        "description": "",
-        "location": {
-            "address": "29 Phố Hàng Giầy",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8513089,
-                    21.0349195
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "closed"
+  },
+  {
+    "_id": "32",
+    "name": "Đế Am Chay",
+    "description": "Buffet và lẩu",
+    "location": {
+      "address": "Trung Hòa, Cầu Giấy",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7953667,
+        21.0066054
+      ]
     },
-    {
-        "_id": "67e9116e5477a2415d4a7bda",
-        "name": "V-cuisine",
-        "description": "",
-        "location": {
-            "address": "29",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8512197,
-                    21.0350189
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian",
+      "Buffet",
+      "Hotpot"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "34",
+    "name": "Chay Mộc Miên - Thăng Long",
+    "description": "Buffet ngon, quán đông",
+    "location": {
+      "address": "Làng quốc tế Thăng Long, Cầu Giấy",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7934354,
+        21.0384776
+      ]
     },
-    {
-        "_id": "67e9116e5477a2415d4a7bdc",
-        "name": "Veggie Castle",
-        "description": "",
-        "location": {
-            "address": "2 Ngõ 275 Âu Cơ",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8247552,
-                    21.0709941
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": ["vegan"],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "35",
+    "name": "Chay Đàm Hoa - CS1",
+    "description": "Không gian nhỏ",
+    "location": {
+      "address": "32 Dịch Vọng Hậu, Cầu Giấy",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7854191,
+        21.0387648
+      ]
     },
-    {
-        "_id": "67e911705477a2415d4a7bde",
-        "name": "Sadhu",
-        "description": "",
-        "location": {
-            "address": "87 Phố Lý Thường Kiệt",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8424463,
-                    21.0255335
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "37",
+    "name": "Nhà hàng Buffet chay Tâm Bình",
+    "description": "Chả cá lã vọng chay",
+    "location": {
+      "address": "Nguyễn Thị Định, Cầu Giấy",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8033195,
+        21.0126914
+      ]
     },
-    {
-        "_id": "67e911705477a2415d4a7be0",
-        "name": "Unnamed Store",
-        "description": "",
-        "location": {
-            "address": "42 Phố Lương Văn Can",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8502658,
-                    21.0330076
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "38",
+    "name": "Buffet chay Vô Vi",
+    "description": "Cầu thang đẹp, không gian xinh",
+    "location": {
+      "address": "Ngõ Thịnh Quang, Cầu Giấy",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7812662,
+        21.0415312
+      ]
     },
-    {
-        "_id": "67e911715477a2415d4a7be2",
-        "name": "VEJO - The Vege Journey",
-        "description": "",
-        "location": {
-            "address": "46B Phố Bát Đàn",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8464019,
-                    21.0337011
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.api/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "39",
+    "name": "Chay Liên Đức",
+    "description": "",
+    "location": {
+      "address": "Ngõ Đông Quan, Cầu Giấy",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8051121,
+        21.0398796
+      ]
     },
-    {
-        "_id": "67e911715477a2415d4a7be4",
-        "name": "The East",
-        "description": "",
-        "location": {
-            "address": "Phố Tống Duy Tân",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8441279,
-                    21.0297293
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "43",
+    "name": "BÊPH LIVING",
+    "description": "",
+    "location": {
+      "address": "Số 10 ngõ 121 Thái Hà, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8196352,
+        21.012567
+      ]
     },
-    {
-        "_id": "67e911715477a2415d4a7be6",
-        "name": "d",
-        "description": "",
-        "location": {
-            "address": "dd Ngõ 151 Phố Lê Văn Hiến",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.7726483,
-                    21.0730862
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "44",
+    "name": "CHAY NIRVANA",
+    "description": "Chuyển thành Chay Mây Tuỳ Duyên",
+    "location": {
+      "address": "Số 9 ngõ 42 Vũ Ngọc Phan, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8129259,
+        21.0134184
+      ]
     },
-    {
-        "_id": "67e911725477a2415d4a7be8",
-        "name": "Unnamed Store",
-        "description": "",
-        "location": {
-            "address": "83 Phố Mai Hắc Đế",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8511005,
-                    21.0133011
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "closed"
+  },
+  {
+    "_id": "46",
+    "name": "AN PHÚC",
+    "description": "",
+    "location": {
+      "address": "20 ngõ 113 Hoàng Cầu, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8223003,
+        21.0154409
+      ]
     },
-    {
-        "_id": "67e911725477a2415d4a7bea",
-        "name": "Unnamed Store",
-        "description": "",
-        "location": {
-            "address": "41 Phố Hàng Mành",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8486496,
-                    21.0312714
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "closed"
+  },
+  {
+    "_id": "47",
+    "name": "Tịnh Thực Quán - Đống Đa",
+    "description": "Tinh Thuc Vegan Restaurant",
+    "location": {
+      "address": "10 Huỳnh Thúc Kháng, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8141409,
+        21.0154107
+      ]
     },
-    {
-        "_id": "67e911735477a2415d4a7bec",
-        "name": "Nhà Hàng Chay Cực Lạc",
-        "description": "",
-        "location": {
-            "address": "Số 9 Ngõ 295 Thụy Khuê",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8137909,
-                    21.0450778
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": ["vegan"],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "48",
+    "name": "HIẾU SINH",
+    "description": "Chuyển sang Đặng Tiến Đông",
+    "location": {
+      "address": "Đặng Tiến Đông, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8237897,
+        21.0120931
+      ]
     },
-    {
-        "_id": "67e911735477a2415d4a7bee",
-        "name": "Bánh mì chay Vegan",
-        "description": "",
-        "location": {
-            "address": "64 Phố Hàng Trống",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8497103,
-                    21.0303507
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": ["vegan"],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "49",
+    "name": "TUỆ GIÁC",
+    "description": "",
+    "location": {
+      "address": "15 Trần Quang Diệu, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8250572,
+        21.016337
+      ]
     },
-    {
-        "_id": "67e911745477a2415d4a7bf0",
-        "name": "Quán Little Hà Nội",
-        "description": "",
-        "location": {
-            "address": "24b Phố Lý Quốc Sư",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8489505,
-                    21.0302188
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "51",
+    "name": "HƯƠNG THIỀN",
+    "description": "Đồ ăn hơi dầu mỡ",
+    "location": {
+      "address": "261 Xã Đàn, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.831537,
+        21.014324
+      ]
     },
-    {
-        "_id": "67e911745477a2415d4a7bf2",
-        "name": "Bếp Chay Huệ Nhiên",
-        "description": "",
-        "location": {
-            "address": "152E Phố Triệu Việt Vương",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8503514,
-                    21.0136947
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": ["vegan"],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "53",
+    "name": "HOMEFOOD. THỰC DƯỠNG - Trúc Khê",
+    "description": "Ngon, trình bày đẹp, giá cao",
+    "location": {
+      "address": "19 Trúc Khê, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8082166,
+        21.0157675
+      ]
     },
-    {
-        "_id": "67e911755477a2415d4a7bf4",
-        "name": "Nhà Hàng Chay Me&An Vegetarian",
-        "description": "",
-        "location": {
-            "address": "61 Phố Hàm Long",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.850731,
-                    21.0202038
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": ["vegetarian"],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "54",
+    "name": "THỰC DƯỠNG AN LÀNH",
+    "description": "",
+    "location": {
+      "address": "153 Yên Lãng, Thịnh Quang, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8170424,
+        21.0099448
+      ]
     },
-    {
-        "_id": "67e911755477a2415d4a7bf6",
-        "name": "Green Inn",
-        "description": "",
-        "location": {
-            "address": "41 Phố Hàng Nón",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.847612,
-                    21.0324629
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "57",
+    "name": "CƠM CHAY DÌ HIỀN",
+    "description": "Cơm suất 35-40k, văn phòng",
+    "location": {
+      "address": "Võ Văn Dũng, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8244033,
+        21.0164692
+      ]
     },
-    {
-        "_id": "67e911755477a2415d4a7bf8",
-        "name": "Thích nhất mỳ",
-        "description": "",
-        "location": {
-            "address": "20 Ngách 31/46 Xuân Diệu",
-            "city": "Hà Nội",
-            "country": "Việt Nam",
-            "coordinates": {
-                "type": "Point",
-                "coordinates": [
-                    105.8267217,
-                    21.0615198
-                ]
-            },
-            "postalCode": null
-        },
-        "cuisine": [],
-        "priceRange": "$",
-        "dietaryOptions": [],
-        "images": ["https://res.cloudinary.com/dsplmxojb/image/upload/v1728726823/orcfxrkhefztmjlwwgq5.jpg"],
-        "owner": null,
-        "reviews": [],
-        "isApproved": false,
-        "createdAt": "2025-03-30T00:00:00.000Z",
-        "__v": 0
-    }
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "58",
+    "name": "Vy Bistro",
+    "description": "Decor xinh, giá cao 70-80k",
+    "location": {
+      "address": "Phạm Ngọc Thạch, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8320101,
+        21.0064031
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "59",
+    "name": "Cơm chay văn phòng An Nhiên",
+    "description": "",
+    "location": {
+      "address": "Kim Liên, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8333406,
+        21.0114403
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "60",
+    "name": "Buffet Chay Hạnh Phúc - Phạm Ngọc Thạch",
+    "description": "",
+    "location": {
+      "address": "Phạm Ngọc Thạch, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8320101,
+        21.0064031
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "61",
+    "name": "Chay Định Thức",
+    "description": "",
+    "location": {
+      "address": "Phạm Ngọc Thạch, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8320101,
+        21.0064031
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "closed"
+  },
+  {
+    "_id": "62",
+    "name": "Mây Vegan Vĩnh Hồ",
+    "description": "",
+    "location": {
+      "address": "Vĩnh Hồ, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8210884,
+        21.0056628
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Vegan"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "63",
+    "name": "Phê Chay - Cà Phê Tỉnh Thức",
+    "description": "Cafe + các món ăn vặt chay",
+    "location": {
+      "address": "Ngõ Sân Quần, Đống Đa",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8333406,
+        21.0114403
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Coffee"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "64",
+    "name": "Nhà Hàng Buffet Chay An Lạc",
+    "description": "",
+    "location": {
+      "address": "109 Trần Hưng Đạo, Hoàn Kiếm",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8420099,
+        21.0235396
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "65",
+    "name": "VEJO - The Vege Journey",
+    "description": "Quán xinh, đồ ăn ngon đẹp",
+    "location": {
+      "address": "46B Bát Đàn, Hoàn Kiếm",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8464019,
+        21.0337011
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "closed"
+  },
+  {
+    "_id": "67",
+    "name": "Nhà Hàng Chay Aummee",
+    "description": "",
+    "location": {
+      "address": "26 Châu Long, Hoàn Kiếm",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8428711,
+        21.0252301
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "68",
+    "name": "Sadhu - Lý Thường Kiệt",
+    "description": "Buffet chay",
+    "location": {
+      "address": "87 Lý Thường Kiệt, Hoàn Kiếm",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8424638,
+        21.0254665
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "71",
+    "name": "LÀNG TA",
+    "description": "",
+    "location": {
+      "address": "117 Hàng Bạc, Hoàn Kiếm",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8517253,
+        21.033899
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "closed"
+  },
+  {
+    "_id": "72",
+    "name": "Cơm chay nàng Tấm",
+    "description": "Quán chay lâu đời nhất HN",
+    "location": {
+      "address": "Trần Hưng Đạo, Hoàn Kiếm",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8442903,
+        21.022374
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Vietnamese"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "73",
+    "name": "Green Inn",
+    "description": "",
+    "location": {
+      "address": "41 Hàng Nón, Hoàn Kiếm",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8470301,
+        21.0326073
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "74",
+    "name": "Nhà chay SoyV",
+    "description": "",
+    "location": {
+      "address": "20 Nguyễn Thiếp, Hoàn Kiếm",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8498117,
+        21.0393247
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "76",
+    "name": "Diệu Âm quán",
+    "description": "",
+    "location": {
+      "address": "696 Ngọc Lâm, Long Biên",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8683918,
+        21.0448467
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "77",
+    "name": "Nhà hàng chay Thiện Tâm An",
+    "description": "",
+    "location": {
+      "address": "555 Lạc Long Quân, Tây Hồ",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8101346,
+        21.0681777
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "78",
+    "name": "Nhà Hàng Buffet Chay Tâm Hoài An",
+    "description": "Nhiều món, đa dạng",
+    "location": {
+      "address": "54c ngõ 12 Đặng Thai Mai, Tây Hồ",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8230027,
+        21.0625066
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "79",
+    "name": "IVegan Supershop",
+    "description": "Pizza ngon, món Âu",
+    "location": {
+      "address": "16 Tô Ngọc Vân, Tây Hồ",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8251602,
+        21.0682714
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "European",
+      "Italian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "80",
+    "name": "CHAY TÂM NGỌC",
+    "description": "Buffet hơi ít món, đã đóng",
+    "location": {
+      "address": "Số 2 Ngõ 545 Lạc Long Quân, Tây Hồ",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8120304,
+        21.0691418
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "closed"
+  },
+  {
+    "_id": "81",
+    "name": "Kiez Vegan",
+    "description": "Bánh nhân nhiều, vỏ giòn",
+    "location": {
+      "address": "12 Dang Thai Mai, Tây Hồ",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8200595,
+        21.0565156
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "European",
+      "Bakery"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "82",
+    "name": "Nhà Hàng Chay Tâm Tuệ Bi",
+    "description": "Buffet lẩu nướng, sát hồ Tây",
+    "location": {
+      "address": "129 Nhật Chiêu, Tây Hồ",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.813965,
+        21.0712057
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Hotpot"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "83",
+    "name": "Nhà Hàng Chay Cực Lạc",
+    "description": "Lẩu cháo, cháo sánh",
+    "location": {
+      "address": "Thụy Khuê, Tây Hồ",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.833992,
+        21.0431214
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Hotpot"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "84",
+    "name": "Zenith Vegan restaurant & cafe",
+    "description": "",
+    "location": {
+      "address": "Âu Cơ, Quảng An, Tây Hồ",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8244956,
+        21.0706432
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Vegan",
+      "Coffee"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "85",
+    "name": "Gòn. Bites & Veggies",
+    "description": "Có cả thực đơn chay và mặn",
+    "location": {
+      "address": "Ngõ 1 Quảng Bá, Quảng An, Tây Hồ",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8261518,
+        21.0649991
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "86",
+    "name": "D've Buffet Chay",
+    "description": "",
+    "location": {
+      "address": "83 Mai Hắc Đế, Hai Bà Trưng",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8511005,
+        21.0133011
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "87",
+    "name": "CHẠM",
+    "description": "",
+    "location": {
+      "address": "94 Bùi Thị Xuân, Hai Bà Trưng",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8497853,
+        21.0145983
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "88",
+    "name": "Phở chay Lò Đúc",
+    "description": "",
+    "location": {
+      "address": "168 Lò Đúc, Hai Bà Trưng",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8550575,
+        21.0182921
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Vietnamese"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "89",
+    "name": "HOMEFOOD. THỰC DƯỠNG - Trần Bình Trọng",
+    "description": "",
+    "location": {
+      "address": "26 Trần Bình Trọng, Hai Bà Trưng",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8438231,
+        21.0181499
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "closed"
+  },
+  {
+    "_id": "90",
+    "name": "Chay Thuận Duyên",
+    "description": "Chuyển sang bán online",
+    "location": {
+      "address": "256 Thái Hà, Hai Bà Trưng",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8509022,
+        21.0105547
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "91",
+    "name": "Nấm House",
+    "description": "Chuyển sang bán online",
+    "location": {
+      "address": "890 Nguyễn Khoái, Hai Bà Trưng",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8627521,
+        21.015428
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "93",
+    "name": "Hương Chay An vui Garden",
+    "description": "Quán nhỏ xinh, trình bày đẹp",
+    "location": {
+      "address": "Đại Từ, Hoàng Mai",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.83219,
+        20.9729176
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "98",
+    "name": "Chay THIêN DUYêN",
+    "description": "Buffet 79K, cơm suất 35-40k",
+    "location": {
+      "address": "24 Ngõ 52 Quan Nhân, Thanh Xuân",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8116188,
+        21.0081932
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "100",
+    "name": "Tịnh Bình Chay",
+    "description": "Buffet, cơm suất tùy nhu cầu",
+    "location": {
+      "address": "Ngõ 172 Nguyễn Tuân, Thanh Xuân",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.8030149,
+        20.9983369
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "102",
+    "name": "Chay Bát Hạnh",
+    "description": "Ăn Chay Đúng Cách",
+    "location": {
+      "address": "Phùng Khoang, Thanh Xuân",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7926341,
+        20.9937908
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "108",
+    "name": "THANH TÂM CHAY",
+    "description": "",
+    "location": {
+      "address": "Số 7 Quang Trung, Hà Đông",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7663335,
+        20.9640707
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "110",
+    "name": "Nhà hàng chay Mơ Lê",
+    "description": "",
+    "location": {
+      "address": "Dương Nội, Hà Đông",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7913246,
+        20.9830443
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "111",
+    "name": "Buffet chay Thiên Ân",
+    "description": "",
+    "location": {
+      "address": "Dương Nội, Hà Đông",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7913246,
+        20.9830443
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "112",
+    "name": "Chay Hồng Hạc",
+    "description": "Cơm suất văn phòng, bán online",
+    "location": {
+      "address": "Văn Quán, Hà Đông",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7847989,
+        20.9777315
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "113",
+    "name": "Thanh Vị Quán",
+    "description": "Gọi món ngày thường, Buffet 135k rằm mồng 1",
+    "location": {
+      "address": "Văn Quán, Hà Đông",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7847989,
+        20.9777315
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "114",
+    "name": "Peace Vegan",
+    "description": "Buffet bình dân 60k",
+    "location": {
+      "address": "Nguyễn Khuyến, Hà Đông",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7878827,
+        20.9765349
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "115",
+    "name": "Bếp Chay Diệu An",
+    "description": "Xe bánh mì chay",
+    "location": {
+      "address": "63 Vạn Phúc, Hà Đông",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.769768,
+        20.9834888
+      ]
+    },
+    "cuisine": [
+      "Vegetarian"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  },
+  {
+    "_id": "116",
+    "name": "Buffet chay Chí Thiện",
+    "description": "",
+    "location": {
+      "address": "Mỗ Lao, Hà Đông",
+      "city": "Hà Nội",
+      "coordinates": [
+        105.7836442,
+        20.9837574
+      ]
+    },
+    "cuisine": [
+      "Vegetarian",
+      "Buffet"
+    ],
+    "priceRange": "$",
+    "dietaryOptions": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "status": "active"
+  }
 ]

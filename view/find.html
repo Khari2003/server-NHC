@@ -1,62 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get Location</title>
-  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-  <style>
-    #map {
-      width: 100%;
-      height: 400px;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Frontend - Đồ án Nguyễn Xuân Khải</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; overflow: hidden; }
+        .presentation { width: 100vw; height: 100vh; position: relative; }
+        .slide { width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; transform: scale(0.9); transition: all 0.5s ease; background: white; padding: 40px 60px; visibility: hidden; }
+        .slide.active { opacity: 1; transform: scale(1); visibility: visible; z-index: 2; }
+        .slide-header { background: linear-gradient(135deg, #1b5e20 0%, #43a047 100%); color: white; padding: 20px 40px; margin: -40px -60px 30px; }
+        .slide-header h2 { font-size: 1.8em; text-transform: uppercase; }
+        .slide-content { flex: 1; }
+        h3 { color: #2e7d32; border-left: 5px solid #43a047; padding-left: 15px; margin-bottom: 20px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card { background: #f1f8e9; border-radius: 12px; padding: 20px; border: 1px solid #c8e6c9; height: 100%; }
+        .card h4 { color: #1b5e20; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .card ul { list-style: none; font-size: 0.85em; }
+        .card li { margin-bottom: 8px; position: relative; padding-left: 20px; }
+        .card li::before { content: "✔"; position: absolute; left: 0; color: #43a047; font-weight: bold; }
+        .tech-tag { background: #e8f5e9; color: #2e7d32; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.8em; border: 1px solid #a5d6a7; margin-right: 5px; }
+        .code-box { background: #263238; color: #80cbc4; padding: 15px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 0.8em; margin-top: 10px; overflow-x: auto; }
+        .controls { position: fixed; bottom: 20px; right: 20px; z-index: 100; }
+        .btn { background: #2e7d32; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        .counter { position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.6); color: white; padding: 5px 15px; border-radius: 20px; }
+        .flow-container { display: flex; align-items: center; justify-content: space-between; background: #e8f5e9; padding: 15px; border-radius: 10px; margin-top: 15px; }
+        .flow-item { text-align: center; font-size: 0.8em; font-weight: bold; color: #2e7d32; }
+    </style>
 </head>
 <body>
-  <h1>Get Your Location</h1>
-  <button id="getLocation">Get Coordinates</button>
-  <p id="output"></p>
-  <div id="map"></div>
 
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1Ijoibmd1eWVua2hhaTIwMDMiLCJhIjoiY20zZWtnMHd0MGQ4aTJpcHhkNTNyb3h5YiJ9.OLZURwzqnNLb1bw-lS9Ixw';
+<div class="presentation">
+    <!-- Slide 1: Công nghệ Frontend -->
+    <div class="slide active">
+        <div class="slide-header"><h2>1. Lựa chọn Công nghệ Frontend</h2></div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h4>📱 Flutter Framework (Google)</h4>
+                    <ul>
+                        <li><strong>Đa nền tảng:</strong> Một code base cho Android & iOS.</li>
+                        <li><strong>Hiệu năng:</strong> Biên dịch mã máy (Native code), mượt mà.</li>
+                        <li><strong>Giao diện:</strong> Widget phong phú, Material Design 3.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>🗺️ OpenStreetMap (OSM)</h4>
+                    <ul>
+                        <li><strong>Mã nguồn mở:</strong> Miễn phí hoàn toàn, không giới hạn.</li>
+                        <li><strong>Flutter Map:</strong> Hiển thị Tile-based mượt mà.</li>
+                        <li><strong>OSRM/Mapbox:</strong> Hỗ trợ tìm đường linh hoạt.</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: 30px; text-align: center;">
+                <span class="tech-tag">Dart</span> <span class="tech-tag">Provider</span> <span class="tech-tag">GetIt</span> <span class="tech-tag">Cloudinary</span>
+            </div>
+        </div>
+    </div>
 
-    // Khởi tạo bản đồ
-    const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [105.854444, 21.028511], // Tọa độ mặc định (Hà Nội)
-      zoom: 10
+    <!-- Slide 2: Kiến trúc Clean Architecture -->
+    <div class="slide">
+        <div class="slide-header"><h2>2. Kiến trúc Clean Architecture</h2></div>
+        <div class="slide-content">
+            <h3>Cấu trúc 4 tầng đảm bảo Clean Code</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>🎨 Presentation</h4>
+                    <p style="font-size: 0.8em;">Widgets & ViewModels (Provider). Xử lý Logic UI.</p>
+                </div>
+                <div class="card">
+                    <h4>🧠 Domain</h4>
+                    <p style="font-size: 0.8em;">Entities & Use Cases. Logic nghiệp vụ thuần túy.</p>
+                </div>
+                <div class="card">
+                    <h4>💾 Data</h4>
+                    <p style="font-size: 0.8em;">Repositories & Data Sources. Kết nối API & Local.</p>
+                </div>
+                <div class="card">
+                    <h4>⚙️ Core</h4>
+                    <p style="font-size: 0.8em;">DI (GetIt), Theme, Errors & Constants.</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px; font-style: italic; color: #666; font-size: 0.9em; text-align: center;">
+                ➔ Đảm bảo hệ thống dễ mở rộng và độc lập giữa các thành phần.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 3: Module Bản đồ & Định vị -->
+    <div class="slide">
+        <div class="slide-header"><h2>3. Module Bản đồ & Tìm đường</h2></div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h4>📍 Tích hợp Bản đồ</h4>
+                    <ul style="font-size: 0.85em;">
+                        <li>Hiển thị <strong>Marker</strong> nhà hàng tương tác.</li>
+                        <li><strong>CircleLayer:</strong> Hiển thị bán kính tìm kiếm thực tế.</li>
+                        <li>Tối ưu hóa Zoom & Pan theo vị trí người dùng.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>🧭 Định vị & Tìm đường</h4>
+                    <ul style="font-size: 0.85em;">
+                        <li><strong>GPS:</strong> GetCurrentLocation lấy tọa độ thực.</li>
+                        <li><strong>OSRM:</strong> Lộ trình lái xe (Driving).</li>
+                        <li><strong>Mapbox:</strong> Lộ trình đi bộ (Walking).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="code-box">
+                // Logic vẽ Route: Polyline(points: routeCoordinates, strokeWidth: 5.0)
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Module Tìm kiếm & Lọc -->
+    <div class="slide">
+        <div class="slide-header"><h2>4. Tìm kiếm & Lọc thông minh</h2></div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h4>🔍 Chế độ Tìm kiếm</h4>
+                    <ul>
+                        <li><strong>Địa chỉ:</strong> Qua OSM Nominatim API.</li>
+                        <li><strong>Khu vực:</strong> Chọn Tỉnh/Thành -> Quận/Huyện.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>⚡ Bộ lọc nâng cao</h4>
+                    <ul>
+                        <li>Lọc theo <strong>Giá cả</strong> (Thấp - Trung - Cao).</li>
+                        <li>Lọc theo <strong>Loại hình</strong> (Buffet, Cơm chay...).</li>
+                        <li>Lọc theo <strong>Khoảng cách</strong> địa lý.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 20px; padding: 10px; background: #e3f2fd; border-radius: 8px; font-size: 0.85em;">
+                <strong>Kết quả:</strong> Tự động cập nhật danh sách Marker trên bản đồ khi người dùng thay đổi bộ lọc.
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Module Tạo và Quản lý cửa hàng (MỚI) -->
+    <div class="slide">
+        <div class="slide-header"><h2>5. Tạo và Quản lý Nhà hàng</h2></div>
+        <div class="slide-content">
+            <h3>Quy trình đóng góp nội dung từ người dùng</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>📝 Biểu mẫu Thông tin (Form)</h4>
+                    <ul style="font-size: 0.85em;">
+                        <li><strong>Validation:</strong> Kiểm tra tính hợp lệ dữ liệu ngay tại Client.</li>
+                        <li><strong>Location Picker:</strong> Chọn vị trí trực tiếp bằng Marker trên bản đồ.</li>
+                        <li><strong>Menu Builder:</strong> Thêm/Sửa từng món ăn trong thực đơn.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>🖼 Xử lý Hình ảnh & Media</h4>
+                    <ul style="font-size: 0.85em;">
+                        <li><strong>Image Picker:</strong> Chụp ảnh từ Camera hoặc chọn từ Gallery.</li>
+                        <li><strong>Cloudinary API:</strong> Tải ảnh lên cloud và nhận URL lưu trữ.</li>
+                        <li>Hỗ trợ tải lên nhiều ảnh (Multiple upload) cho mỗi nhà hàng.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flow-container">
+                <div class="flow-item">Nhập Form</div> <div style="color:#43a047">➔</div>
+                <div class="flow-item">Chọn Vị trí</div> <div style="color:#43a047">➔</div>
+                <div class="flow-item">Upload Ảnh</div> <div style="color:#43a047">➔</div>
+                <div class="flow-item">Call API Create</div> <div style="color:#43a047">➔</div>
+                <div class="flow-item">Success!</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Giải pháp AI OCR -->
+    <div class="slide">
+        <div class="slide-header"><h2>6. Giải pháp AI OCR (Điểm nhấn)</h2></div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h4>🛠 Quy trình Frontend</h4>
+                    <ul style="font-size: 0.85em;">
+                        <li>Gửi ảnh Menu qua Multipart Request.</li>
+                        <li>Nhận kết quả JSON gồm Tên món & Giá.</li>
+                        <li>Tự động điền dữ liệu vào danh sách Menu.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>🤖 Trải nghiệm thông minh</h4>
+                    <ul style="font-size: 0.85em;">
+                        <li>Tiết kiệm 80% thời gian nhập liệu thủ công.</li>
+                        <li>Cho phép kiểm tra và chỉnh sửa lại sau khi AI đọc.</li>
+                        <li>Xử lý lỗi và phản hồi realtime (SnackBar).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="code-box" style="font-size: 0.7em;">
+                final result = await extractMenuFromImage(image); // Trả về List&lt;MenuItem&gt;
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Quản lý trạng thái & DI -->
+    <div class="slide">
+        <div class="slide-header"><h2>7. Quản lý trạng thái & DI</h2></div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h4>🏗 Provider Pattern</h4>
+                    <ul style="font-size: 0.85em;">
+                        <li><strong>AuthViewModel:</strong> Duy trì phiên đăng nhập.</li>
+                        <li><strong>StoreViewModel:</strong> CRUD và lọc nhà hàng.</li>
+                        <li><strong>SearchViewModel:</strong> Quản lý kết quả tìm kiếm.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>💉 GetIt (Service Locator)</h4>
+                    <ul style="font-size: 0.85em;">
+                        <li>Quản lý Dependency Injection toàn cục.</li>
+                        <li>Đảm bảo tính Singleton cho Repositories.</li>
+                        <li>Dễ dàng thay thế DataSources (Mock/Real).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="code-box">
+                sl.registerLazySingleton<StoreRepository>(() => StoreRepositoryImpl(sl()));
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Tổng kết Frontend -->
+    <div class="slide">
+        <div class="slide-header"><h2>8. UI/UX & Tổng kết</h2></div>
+        <div class="slide-content">
+            <div class="grid-3" style="margin-bottom: 20px;">
+                <div class="card" style="text-align: center;"><h4>🎨 Material 3</h4><p style="font-size: 0.8em;">Chuẩn giao diện Google hiện đại.</p></div>
+                <div class="card" style="text-align: center;"><h4>🚀 Hiệu năng</h4><p style="font-size: 0.8em;">Xử lý Map & AI mượt mà.</p></div>
+                <div class="card" style="text-align: center;"><h4>✅ Tin cậy</h4><p style="font-size: 0.8em;">Xử lý lỗi & Trạng thái tải rõ ràng.</p></div>
+            </div>
+            <div class="card" style="background: #e8f5e9;">
+                <p><strong>Kết luận:</strong> Phần Frontend được xây dựng hoàn thiện với <strong>Clean Architecture</strong>, cung cấp đầy đủ công cụ từ Tìm kiếm, Chỉ đường đến Đóng góp nội dung (Tạo cửa hàng) tích hợp <strong>AI OCR</strong> đột phá.</p>
+            </div>
+            <h2 style="text-align: center; color: #2e7d32; margin-top: 30px;">XIN CẢM ƠN QUÝ THẦY CÔ!</h2>
+        </div>
+    </div>
+</div>
+
+<div class="counter" id="slideCount">1 / 8</div>
+<div class="controls">
+    <button class="btn" onclick="moveSlide(-1)">Trước</button>
+    <button class="btn" onclick="moveSlide(1)">Tiếp</button>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    function moveSlide(step) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + step + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        document.getElementById('slideCount').innerText = `${currentSlide + 1} / ${slides.length}`;
+    }
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') moveSlide(1);
+        if (e.key === 'ArrowLeft') moveSlide(-1);
     });
-
-    // Lấy tọa độ và cập nhật bản đồ
-    document.getElementById('getLocation').addEventListener('click', () => {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            const { latitude, longitude } = position.coords;
-            document.getElementById('output').innerText = 
-              `Latitude: ${latitude}, Longitude: ${longitude}`;
-
-            // Cập nhật vị trí trung tâm bản đồ
-            map.setCenter([longitude, latitude]);
-
-            // Thêm điểm đánh dấu
-            new mapboxgl.Marker()
-              .setLngLat([longitude, latitude])
-              .addTo(map);
-          },
-          (error) => {
-            document.getElementById('output').innerText = 'Error getting location.';
-            console.error(error);
-          }
-        );
-      } else {
-        document.getElementById('output').innerText = 'Geolocation is not supported by this browser.';
-      }
-    });
-  </script>
+</script>
 </body>
 </html>
