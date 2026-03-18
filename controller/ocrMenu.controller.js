@@ -3,7 +3,7 @@ const sharp = require("sharp");
 const ort = require("onnxruntime-node");
 
 // Cấu hình Gemini
-const genAI = new GoogleGenerativeAI("AIzaSyDEC4-6yXRUJ3vPZacAgl4CFKpb4yy3Gw4"); 
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY); 
 const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
 
 let session = null;
