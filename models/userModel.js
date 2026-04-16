@@ -56,7 +56,7 @@ const userSchema = new Schema({
     gender: { 
         type: String, 
         enum: ['male', 'female', 'other'], 
-        required: true 
+        required: false 
     },
     phone: {
         type: String,
@@ -94,7 +94,7 @@ const userSchema = new Schema({
             type: {
                 type: String,
                 enum: ['Point'],
-                default: 'Point'
+                required: false
             },
             coordinates: {
                 type: [Number], // [longitude, latitude]

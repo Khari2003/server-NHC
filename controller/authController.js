@@ -6,6 +6,8 @@ const jwt = require('jsonwebtoken');
 const emailSender = require('../helper/emailSender');
 
 // Đăng ký người dùng mới
+// authController.js
+
 exports.register = async function (req, res) {
     const err = validationResult(req);
     if (!err.isEmpty()) {
@@ -15,19 +17,28 @@ exports.register = async function (req, res) {
         }));
         return res.status(400).json({ errors: errorMessage });
     }
+
     try {
+        const { name, email, password, phone } = req.body;
+
+        // Tạo user mới chỉ với các thông tin được cung cấp
         const user = new User({
-            ...req.body,
-            passwordHash: bcrypt.hashSync(req.body.password, 8) // Mã hóa mật khẩu
+            name,
+            email,
+            phone,
+            passwordHash: bcrypt.hashSync(password, 8)
         });
+
         await user.save();
+
         return res.status(201).json({
-            id: user._id,
-            name: user.name,
-            email: user.email,
-            phone: user.phone,
-            preferences: user.preferences,
-            location: user.location
+            message: "User registered successfully",
+            user: {
+                id: user._id,
+                name: user.name,
+                email: user.email,
+                phone: user.phone
+            }
         });
     } catch (e) {
         if (e.code === 11000) {
